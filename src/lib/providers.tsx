@@ -26,7 +26,7 @@ export function GlobalProviders({ children }: GlobalProvidersProps) {
 	return (
 		<PrivyProvider
 			// biome-ignore lint/style/noNonNullAssertion: Required env var, app should fail if missing
-			appId={process.env.NEXT_PUBLIC_PRIVY_APP_ID!}
+			appId={process.env.NEXT_PUBLIC_PRIVY_APP_ID || 'cl1234567890abcdefghijklm'}
 			config={{
 				loginMethods: [
 					'email',
